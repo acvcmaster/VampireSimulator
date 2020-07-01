@@ -18,10 +18,15 @@ h1 {
     font-family: Segoe Script;
 }
 
+.button.load {
+    color: grey;
+    border-color: grey;
+}
+
 .button:hover {
-    &.load {
-        background-color: red;
-    }
+    // &.load {
+    //     background-color: red;
+    // }
     &.start {
         background-color: turquoise;
     }
