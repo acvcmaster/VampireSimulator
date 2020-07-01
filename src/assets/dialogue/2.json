@@ -1,0 +1,11 @@
+{
+	"index": 2,
+	"message": "...",
+	"image": "assets/characters/strahd_sad.jpg",
+	"options": [
+		{
+			"message": "Ok",
+			"index": -1
+		}
+	]
+}

@@ -1,0 +1,16 @@
+<div class="container fullscreen border" *ngIf="dialogue">
+    <img class="fill cover blurred" src="assets/background.jpg">
+    <div class="container overlay fill flex center">
+        <div class="container img">
+            <img class="fill" [src]="dialogue?.image">
+        </div>
+        <div class="container text flex center">
+            <span>{{dialogue?.message}}</span>
+        </div>
+        <div class="container buttons flex even">
+            <div class="button flex center" *ngFor="let option of dialogue.options" (click)="changeDialogue(option.index)">
+                <span>{{option.message}}</span>
+            </div>
+        </div>
+    </div>
+</div>

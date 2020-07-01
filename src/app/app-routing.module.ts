@@ -1,8 +1,26 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { TitleScreenComponent } from './title-screen/title-screen.component';
+import { DialogueScreenComponent } from './dialogue-screen/dialogue-screen.component';
+import { DialogueScreenGuard } from './dialogue-screen/dialogue-screen.guard';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'title',
+    component: TitleScreenComponent
+  },
+  {
+    path: 'dialogue',
+    component: DialogueScreenComponent,
+    canActivate: [DialogueScreenGuard]
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: 'title'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
