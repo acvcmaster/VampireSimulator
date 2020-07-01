@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TitleScreenComponent } from './title-screen/title-screen.component';
 import { DialogueScreenComponent } from './dialogue-screen/dialogue-screen.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EndScreenComponent } from './end-screen/end-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleScreenComponent,
-    DialogueScreenComponent
+    DialogueScreenComponent,
+    EndScreenComponent
   ],
   imports: [
     BrowserModule,

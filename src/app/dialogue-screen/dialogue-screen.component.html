@@ -1,5 +1,5 @@
 <div class="container fullscreen border" *ngIf="dialogue">
-    <img class="fill cover blurred" src="assets/background.jpg">
+    <img class="fill cover blurred" [src]="dialogue?.background">
     <div class="container overlay fill flex center">
         <div class="container img">
             <img class="fill" [src]="dialogue?.image">
@@ -8,8 +8,8 @@
             <span>{{dialogue?.message}}</span>
         </div>
         <div class="container buttons flex even">
-            <div class="button flex center" *ngFor="let option of dialogue.options" (click)="changeDialogue(option.index)">
-                <span>{{option.message}}</span>
+            <div class="button flex center option" *ngFor="let option of dialogue.options" (click)="changeDialogue(option.index, option.badEnd)">
+                <span>{{option?.message}}</span>
             </div>
         </div>
     </div>

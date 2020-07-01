@@ -59,4 +59,21 @@
     span {
         margin: 0 20px;
     }
+    &.option:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+}
+
+.purple {
+    color: #df97cf;
+}
+
+.red {
+    color: red;
+}
+
+.shadow {
+    text-shadow: 2px 0 0 #000000, -2px 0 0 #000000, 0 2px 0 #000000, 0 -2px 0 #000000, 1px 1px #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000;
 }
