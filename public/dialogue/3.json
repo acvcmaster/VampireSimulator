@@ -1,8 +1,8 @@
 {
 	"index": 3,
 	"message": "You get to the tavern but Strahd kills you when you both get there. He is the devil, after all. The bartender, Danika, faints away in terror.",
-	"image": "assets/characters/strahd/strahd_blood.jpg",
-	"background": "assets/tavern.jpg",
+	"image": "/characters/strahd/strahd_blood.jpg",
+	"background": "/tavern.jpg",
 	"options": [
 		{
 			"message": "OK",
