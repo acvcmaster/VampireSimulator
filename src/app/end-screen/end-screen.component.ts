@@ -18,9 +18,7 @@ export class EndScreenComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       if (params) {
         this.badEnd = params.badEnd ? params.badEnd === 'true' : false;
-        if (!this.badEnd) {
-          this.audioService.play('background', 'fanfare.mp3', 0.5, false);
-        }
+        this.playSound(this.badEnd);
       }
     })
   }
@@ -29,6 +27,14 @@ export class EndScreenComponent implements OnInit {
 
   ngOnInit(): void {
     this.navigationService.blockNavigation();
+  }
+
+  playSound(badEnd: boolean) {
+    if (this.badEnd) {
+      this.audioService.play('background', 'death.mp3', 0.3, false);
+    } else {
+      this.audioService.play('background', 'fanfare.mp3', 0.3, false);
+    }
   }
 
 }
