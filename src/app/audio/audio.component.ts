@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { AudioService, AudioQueryType } from './audio.service';
 
 @Component({
@@ -10,8 +10,8 @@ export class AudioComponent implements OnInit {
 
   constructor(private audioService: AudioService) { }
 
-  @ViewChild('backgroundMusic', { static: false }) backgroundMusic: HTMLAudioElement;
-  @ViewChild('dialogue', { static: false }) dialogue: HTMLAudioElement;
+  @ViewChild('backgroundMusic', { static: false }) backgroundMusic: ElementRef;
+  @ViewChild('dialogue', { static: false }) dialogue: ElementRef;
 
   ngOnInit() {
     this.audioService.onPlay.subscribe(data => {
@@ -40,10 +40,10 @@ export class AudioComponent implements OnInit {
   getAudioElement(type: AudioQueryType): HTMLAudioElement {
     switch (type) {
       case "background": {
-        return this.backgroundMusic;
+        return this.backgroundMusic ? this.backgroundMusic.nativeElement : null;
       }
       case "dialogue": {
-        return this.dialogue;
+        return this.dialogue ? this.dialogue.nativeElement : null;
       }
     }
   }
