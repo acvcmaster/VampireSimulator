@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
-import { DialogueScreenService } from './dialogue-screen.service';
+import { NavigationService } from '../services/navigation.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DialogueScreenGuard implements CanActivate {
 
-  constructor(private dialogueScreenService: DialogueScreenService, private router: Router) { }
+  constructor(private navigationService: NavigationService, private router: Router) { }
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    const result = this.dialogueScreenService.canNavigate;
+    const result = this.navigationService.canNavigate;
     if (!result) {
       this.router.navigate(['']);
     }

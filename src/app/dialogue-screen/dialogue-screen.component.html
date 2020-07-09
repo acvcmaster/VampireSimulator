@@ -4,13 +4,16 @@
         <div class="container img">
             <img class="fill" [src]="dialogue?.image">
         </div>
-        <div class="container text flex center">
-            <span>{{dialogue?.message}}</span>
-        </div>
         <div class="container buttons flex even">
             <div class="button flex center option" *ngFor="let option of dialogue.options" (click)="changeDialogue(option.index, option.badEnd)">
                 <span>{{option?.message}}</span>
             </div>
+        </div>
+        <div class="container text flex center">
+            <div class="container overlay fill image">
+                <img class="fill" src="assets/ui/border.svg">
+            </div>
+            <span>{{dialogue?.message}}</span>
         </div>
     </div>
 </div>

@@ -2,7 +2,7 @@
 	"index": 2,
 	"message": "...",
 	"image": "assets/characters/strahd/strahd_sad.jpg",
-	"background": "assets/background.jpg",
+	"background": "assets/backgrounds/background.jpg",
 	"options": [
 		{
 			"message": "Leave",

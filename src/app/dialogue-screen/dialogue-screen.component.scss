@@ -11,16 +11,25 @@
 }
 
 .container.text {
-    width: calc(50% - 80px);
+    position: relative;
+    width: calc(100% - 80px);
     height: calc(50% - 80px);
     padding: 40px;
+    background-color: black;
+    opacity: 0.3;
     span {
+        display: inline-block;
+        text-align: center;
+        width: 80%;
         color: white;
-        font-size: 40px;
+        font-size: 25px;
     }
 }
 
 .container.buttons {
-    width: 100%;
+    width: 50%;
     height: 50%;
+}
+
+.container.image {
 }

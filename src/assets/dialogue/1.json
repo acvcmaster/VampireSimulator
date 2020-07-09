@@ -2,7 +2,7 @@
 	"index": 1,
 	"message": "Oh, a young adventurer I see.. Let's have some booze at the tavern, I want to get to know you better.",
 	"image": "assets/characters/strahd/strahd_happy.jpg",
-	"background": "assets/background.jpg",
+	"background": "assets/backgrounds/background.jpg",
 	"options": [
 		{
 			"message": "Follow him",

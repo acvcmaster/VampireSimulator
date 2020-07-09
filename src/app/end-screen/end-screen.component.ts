@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DialogueScreenService } from '../dialogue-screen/dialogue-screen.service';
 import { ActivatedRoute } from '@angular/router';
+import { NavigationService } from '../services/navigation.service';
 
 @Component({
   selector: 'app-end-screen',
@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class EndScreenComponent implements OnInit {
 
   constructor(
-    private dialogueScreenService: DialogueScreenService,
+    private navigationService: NavigationService,
     private route: ActivatedRoute
   ) {
     this.route.queryParams.subscribe(params => {
@@ -23,7 +23,7 @@ export class EndScreenComponent implements OnInit {
   badEnd = false;
 
   ngOnInit(): void {
-    this.dialogueScreenService.blockNavigation();
+    this.navigationService.blockNavigation();
   }
 
 }

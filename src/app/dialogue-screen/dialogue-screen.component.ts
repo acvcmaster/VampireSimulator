@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { DialogueScreenService } from './dialogue-screen.service';
+import { DialogueScreenService } from './dialogue.service';
 import { DialogueScreenModel } from './dialogue-screen.model';
 import { Router } from '@angular/router';
+import { NavigationService } from '../services/navigation.service';
 
 @Component({
   selector: 'app-dialogue-screen',
@@ -12,6 +13,7 @@ export class DialogueScreenComponent implements OnInit {
 
   constructor(
     private dialogueScreenService: DialogueScreenService,
+    private navigationService: NavigationService,
     private router: Router
   ) { }
 
@@ -19,7 +21,7 @@ export class DialogueScreenComponent implements OnInit {
   badEnd: boolean;
 
   ngOnInit(): void {
-    this.dialogueScreenService.blockNavigation();
+    this.navigationService.blockNavigation();
     this.queryDialogue();
   }
 
@@ -34,7 +36,7 @@ export class DialogueScreenComponent implements OnInit {
       if (data) {
         this.dialogue = data;
       } else {
-        this.dialogueScreenService.canNavigate = true;
+        this.navigationService.canNavigate = true;
         this.router.navigate(['end'], { queryParams: { badEnd: this.badEnd } });
       }
     });

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { DialogueScreenService } from '../dialogue-screen/dialogue-screen.service';
+import { NavigationService } from '../services/navigation.service';
+import { DialogueScreenService } from '../dialogue-screen/dialogue.service';
 
 @Component({
   selector: 'app-title-screen',
@@ -11,6 +12,7 @@ export class TitleScreenComponent {
 
   constructor(
     private router: Router,
+    private navigationService: NavigationService,
     private dialogueScreenService: DialogueScreenService
   ) { }
 
@@ -18,6 +20,7 @@ export class TitleScreenComponent {
 
   navigateDialogue() {
     this.dialogueScreenService.init();
+    this.navigationService.init();
     this.router.navigate(['dialogue']);
   }
 }
