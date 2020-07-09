@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { NavigationService } from '../services/navigation.service';
 import { TypewriterService } from '../services/typewriter.service';
 import { Subscription } from 'rxjs';
+import { AudioService } from '../audio/audio.service';
 
 @Component({
   selector: 'app-dialogue-screen',
@@ -17,7 +18,8 @@ export class DialogueScreenComponent implements OnInit {
     private dialogueScreenService: DialogueScreenService,
     private navigationService: NavigationService,
     private router: Router,
-    private typewriterService: TypewriterService
+    private typewriterService: TypewriterService,
+    private audioService: AudioService
   ) { }
 
   dialogue: DialogueScreenModel;
@@ -48,9 +50,12 @@ export class DialogueScreenComponent implements OnInit {
       if (data) {
         this.dialogue = data;
         this.dialogueSubscription.add(this.typewriterService.getTypewriter(data.message, data.timings).subscribe(word => {
-          console.log(word);
           this.dialogueMessage += `${word} `;
         }));
+
+        if (this.dialogue.audioType && this.dialogue.audio) {
+          this.audioService.play(this.dialogue.audioType, this.dialogue.audio, 0.5, false);
+        }
       } else {
         this.navigationService.canNavigate = true;
         this.router.navigate(['end'], { queryParams: { badEnd: this.badEnd } });

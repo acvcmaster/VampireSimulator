@@ -1,5 +1,5 @@
 <div class="container fullscreen border" *ngIf="dialogue">
-    <img class="fill cover blurred" [src]="dialogue?.background">
+    <img class="fill cover" [src]="dialogue?.background">
     <div class="container overlay fill flex center">
         <div class="container img">
             <img class="fill" [src]="dialogue?.image">
@@ -9,10 +9,7 @@
                 <span>{{option?.message}}</span>
             </div>
         </div>
-        <div class="container text flex center">
-            <div class="container overlay fill image">
-                <img class="fill" src="assets/ui/border.svg">
-            </div>
+        <div class="container overlay text flex center">
             <span>{{dialogueMessage}}</span>
         </div>
     </div>

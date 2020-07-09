@@ -23,11 +23,11 @@ export class TypewriterService {
         // length: words.length - 1
         const result: number[] = [];
         for (let i = 0; i < words.length - 1; i++) {
-            let delay = 300;
+            let delay = 200;
             if (words[i].endsWith('.') || words[i].endsWith('?') || words[i].endsWith('!')) {
-                delay = 800;
+                delay = 450;
             } else if (words[i].endsWith(',')) {
-                delay = 500;
+                delay = 300;
             }
             result.push(delay);
         }

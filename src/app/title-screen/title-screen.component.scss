@@ -18,6 +18,16 @@ h1 {
     font-family: Segoe Script;
 }
 
+p.welcome {
+    &:not(.show) {
+        opacity: 0;
+    }
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    transition: all ease-in 0.3s;
+}
+
 .button.load {
     color: grey;
     border-color: grey;

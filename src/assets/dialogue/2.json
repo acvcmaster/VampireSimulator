@@ -1,8 +1,10 @@
 {
 	"index": 2,
-	"message": "...",
-	"image": "assets/characters/strahd/strahd_sad.jpg",
+	"message": "Tsc. Looks like I won't be having company today.",
+	"image": "assets/characters/strahd/strahd_yikes.png",
 	"background": "assets/backgrounds/background.jpg",
+	"audioType": "dialogue",
+	"audio": "strahd/strahd_tsc.mp3",
 	"options": [
 		{
 			"message": "Leave",

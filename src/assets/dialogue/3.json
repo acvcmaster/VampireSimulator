@@ -1,8 +1,10 @@
 {
 	"index": 3,
-	"message": "You get to the tavern but Strahd kills you when you both get there. He is the devil, after all. The bartender, Danika, faints away in terror.",
-	"image": "assets/characters/strahd/strahd_blood.jpg",
+	"message": "No more games, adventurer. I will put you to eternal slumber.",
+	"image": "assets/characters/strahd/strahd_blood.png",
 	"background": "assets/backgrounds/tavern.jpg",
+	"audioType": "dialogue",
+	"audio": "strahd/strahd_no_more_games.mp3",
 	"options": [
 		{
 			"message": "OK",

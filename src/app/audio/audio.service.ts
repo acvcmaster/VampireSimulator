@@ -22,10 +22,10 @@ export class AudioService {
                 return `assets/audio/bgm/${audio}`;
             }
             case 'dialogue': {
-                return `assets/dialogue/${audio}`;
+                return `assets/audio/dialogue/${audio}`;
             }
             case 'sfx': {
-                return `assets/sfx/${audio}`;
+                return `assets/audio/sfx/${audio}`;
             }
             default: {
                 return audio;
