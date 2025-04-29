@@ -1,0 +1,13 @@
+{
+	"index": 2,
+	"message": "...",
+	"image": "/characters/strahd/strahd_sad.jpg",
+	"background": "/background.jpg",
+	"options": [
+		{
+			"message": "Leave",
+			"index": -1,
+			"badEnd": false
+		}
+	]
+}

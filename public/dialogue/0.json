@@ -1,0 +1,16 @@
+{
+	"index": 0,
+	"message": "Hello, my name is Strahd Von Zarovich. I'm a noble man that lives in the gracious land of Barovia.",
+	"image": "/characters/strahd/strahd.jpg",
+	"background": "/background.jpg",
+	"options": [
+		{
+			"message": "Say hello",
+			"index": 1
+		},
+		{
+			"message": "Ignore",
+			"index": 2
+		}
+	]
+}
