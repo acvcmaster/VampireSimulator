@@ -11,7 +11,7 @@
 		"characters/kaede/kaede.png",
 		"characters/strahd/unknown.png"
 	],
-	"scene": "cobble-village",
+	"scene": "market-town",
 	"next": [
 		{
 			"message": {

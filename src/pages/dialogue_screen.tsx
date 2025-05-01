@@ -1,14 +1,14 @@
-import Button from "@/components/button";
 import Centered from "@/components/centered";
 import Container from "@/components/container";
-import Grid from "@/components/grid";
 import Title from "@/components/title";
 import { useEffect, useRef, useState } from "react";
 
-export default function TitleScreen(props: { onPlay: () => void }) {
+export default function DialogueScreen(props: {
+  dialogue: string;
+  onChange: (reference: string) => void;
+}) {
   const [loading, setLoading] = useState<boolean>(true);
   const audioElementRef = useRef<HTMLAudioElement>(null);
-  const { onPlay } = props;
 
   useEffect(() => {
     if (!loading && !!audioElementRef?.current?.src) {
@@ -16,29 +16,23 @@ export default function TitleScreen(props: { onPlay: () => void }) {
     }
   }, [loading, audioElementRef?.current?.src]);
 
+  // Fetch Dialogue
+
+  // Fetch Scene
+
   return (
     <>
       <audio
         className="invisible"
         ref={audioElementRef}
-        src={"audio/bgm/cobble_village.mp3"}
+        src={""}
         autoPlay
         onLoadedData={() => setLoading(false)}
       ></audio>
       <Container background="backgrounds/background.jpg">
-        <Grid rows={2} columns={1}>
-          <Centered>
-            <Title text="Dating with Strahd" />
-          </Centered>
-          <Grid rows={1} columns={2}>
-            <Centered>
-              <Button text="Load" disabled onClick={() => {}} />
-            </Centered>
-            <Centered>
-              <Button text="Play" onClick={onPlay} />
-            </Centered>
-          </Grid>
-        </Grid>
+        <Centered>
+          <Title text="Dialogue screen!"></Title>
+        </Centered>
       </Container>
     </>
   );
