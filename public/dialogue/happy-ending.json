@@ -1,0 +1,14 @@
+{
+	"title": {
+		"en": "The end",
+		"jp": "ジ・エンド"
+	},
+	"message": {
+		"en": "Unimplemented!",
+		"jp": "未実装!"
+	},
+	"sounds": [
+		"audio/bgm/fanfare.mp3"
+	],
+	"scene": "ending"
+}

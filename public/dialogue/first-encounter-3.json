@@ -1,0 +1,20 @@
+{
+	"title": {
+		"en": "???",
+		"jp": "???"
+	},
+	"message": {
+		"en": "You who goes there, who are you?",
+		"jp": "そこの貴様、名は何と言う。"
+	},
+	"characters": [
+		"characters/strahd/strahd.png"
+	],
+	"scene": "market-town",
+	"next": [
+		{
+			"message": "Say your name",
+			"reference": "first-encounter-4"
+		}
+	]
+}

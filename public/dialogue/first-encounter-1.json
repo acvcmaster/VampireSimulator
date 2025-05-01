@@ -1,0 +1,24 @@
+{
+	"title": {
+		"en": "Kaede",
+		"jp": "Kaede"
+	},
+	"message": {
+		"en": "Who is that guy...",
+		"jp": "あの人って誰でしょう・・・"
+	},
+	"characters": [
+		"characters/kaede/kaede.png",
+		"characters/strahd/unknown.png"
+	],
+	"scene": "cobble-village",
+	"next": [
+		{
+			"message": {
+				"en": "Approach him",
+				"jp": "近づく"
+			},
+			"reference": "first-encounter-2"
+		}
+	]
+}

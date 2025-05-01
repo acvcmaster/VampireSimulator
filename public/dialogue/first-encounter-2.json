@@ -1,0 +1,30 @@
+{
+	"title": {
+		"en": "???",
+		"jp": "???"
+	},
+	"message": {
+		"en": "What do you mean? I have permission to be here.. You don't know who you're talking to!",
+		"jp": "どういうことだ？ この俺はここに立ち入る許可証を持っている。 俺のことも知らないで・・・"
+	},
+	"characters": [
+		"characters/strahd/unknown.png"
+	],
+	"scene": "cobble-village",
+	"next": [
+		{
+			"message": {
+				"en": "Leave silently",
+				"jp": "静かに立ち去る"
+			},
+			"reference": "first-encounter-3"
+		},
+		{
+			"message": {
+				"en": "Ask what's going on",
+				"jp": "何があったか聞く"
+			},
+			"reference": "first-encounter-3"
+		}
+	]
+}

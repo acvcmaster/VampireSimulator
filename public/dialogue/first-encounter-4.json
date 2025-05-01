@@ -1,0 +1,15 @@
+{
+	"title": {
+		"en": "Kaede",
+		"jp": "楓"
+	},
+	"message": {
+		"en": "I'm Kaede.. I'm an adventurer. And you?",
+		"jp": "楓って言う。 冒険者をやっているんだけど、あんたは？"
+	},
+	"characters": [
+		"characters/kaede/kaede.png"
+	],
+	"scene": "market-town",
+	"next": "first-encounter-5"
+}

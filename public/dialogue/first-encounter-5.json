@@ -1,0 +1,18 @@
+{
+	"title": {
+		"en": "Strahd Von Zarovich",
+		"jp": "ストラッド・ヴォン・ザロヴィチ"
+	},
+	"message": {
+		"en": "Oh look at what we've got here.. an adventurer, where are my manners? I'm Strahd Von Zarovich, the lord of these lands, at your disposal.",
+		"jp": "これこれは、冒険者ではないか・・ 失礼。 俺はストラッド・ヴォン・ザロヴィチ、ここら辺の党首をやっている者だ。お見知りおきを。"
+	},
+	"characters": [
+		"characters/strahd/strahd.png"
+	],
+	"sounds": [
+		"audio/dialogue/strahd/strahd_greeting.mp3"
+	],
+	"scene": "market-town",
+	"next": "happy-ending"
+}
