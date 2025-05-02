@@ -9,6 +9,7 @@ export default function DialogueScreen(props: {
 }) {
   const [loading, setLoading] = useState<boolean>(true);
   const audioElementRef = useRef<HTMLAudioElement>(null);
+  const { dialogue, onChange } = props;
 
   useEffect(() => {
     if (!loading && !!audioElementRef?.current?.src) {
